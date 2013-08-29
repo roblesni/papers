@@ -14,7 +14,7 @@
 \usepackage{color}									% color package
 \usepackage{centernot}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{datetime}
+%\usepackage{datetime}
 \usepackage{amssymb}
 
 % various theorems, numbered by section
@@ -77,7 +77,7 @@ Moreover, a sufficient and necessary condition for the truth of the generalized 
 In order to to state it rigorously, we first need to specify a bracketing condition imposed on the zeros under which this explicit formula is to hold.
 \begin{definition} \label{bracketingdefinition}
 Let us suppose that $A_1 >0$ and $T>0$. Moreover, we let $T \to \infty$ through values such that $\left| {T - \gamma } \right| > \exp ( - {A_1}\gamma /\log \gamma )$ for every ordinate $\gamma$ of a zero $\rho$ of $\zeta(s)$. We define the bracketing condition $\mathcal{B}$ on a sum involving $\rho = \beta + i\gamma$ and $\rho' = \beta' + i\gamma'$ to be a summation where the terms are bracketed in such a way that two terms for which
-\begin{align} \la%bel{bracketinginequality}
+\begin{align} \label{bracketinginequality}
 \left| {\gamma  - \gamma '} \right| < \exp ( - {A_1}\gamma /\log \gamma ) + \exp ( - {A_1}\gamma '/\log \gamma ')
 \end{align}
 are included in the same bracket. When a sum over $\rho$ satisfies the bracketing condition $\mathcal{B}$ we will write $\sum_{\rho \in \mathcal{B}}{f(\rho)}$.
@@ -95,7 +95,7 @@ First, as we will see later on, the assumptions on the simplicity of the zeros c
 Second, \eqref{Hardy-Littlewood-Ramanujan} is unconditional on the Riemann hypothesis and the bracketing process, which is related to the distance between consecutive non-trivial zeros, provides a surmontable theoretical and computational limitation as will be elaborated later on. In particular, we note that \textcolor{red}{the bracketing $\mathcal{B}$ can always be achieved and it leads to sufficiently well-behaved sets}.\\\\
 Ramanujan \cite{hardy_littlewood} was the first to propose a generalization of \eqref{Hardy-Littlewood-Ramanujan} by considering a pair of sufficiently well-behaved functions $\varphi(x)$ and $\psi(x)$ connected by cosine reciprocity
 \begin{align} \label{cosinereciprocityintro}
-\int_0^\infty  {\%varphi (x)\cos (2ux)dx}  = \frac{1}{2}\sqrt \pi  \psi (u),\quad \int_0^\infty  {\psi (x)\cos (2ux)dx}  = \frac{1}{2}\sqrt \pi  \varphi (u).
+\int_0^\infty  {\varphi (x)\cos (2ux)dx}  = \frac{1}{2}\sqrt \pi  \psi (u),\quad \int_0^\infty  {\psi (x)\cos (2ux)dx}  = \frac{1}{2}\sqrt \pi  \varphi (u).
 \end{align}
 If we denote by $Z_1(s)$ and $Z_2(s)$ their Mellin transforms divided by $\Gamma(s)$, i.e.
 \[{Z_1}(s) = \frac{1}{{\Gamma (s)}}\int_0^\infty  {{x^{s - 1}}\varphi (x)dx} ,\quad {Z_2}(s) = \frac{1}{{\Gamma (s)}}\int_0^\infty  {{x^{s - 1}}\psi (x)dx}, \]
@@ -368,16 +368,9 @@ are included in the same bracket. When a sum over $\rho$ satisfies the bracketin
 \end{definition}
 \noindent The following definition will restrict the class of functions to which $\varphi$ and $\psi$ might belong to.
 \begin{definition}[\textcolor{red}{$\mathcal{K}$ class}]
-\noindent If $\{\varphi, \psi \}$ is a pair of real-valued functions on $[0,+\infty)$ that satisfies the following conditions:
+\noindent If $\{\varphi, \psi \}$ is a pair of real-valued functions that satisfies the following conditions:
 \begin{enumerate}
-\item[\emph{1}] For $f \in \{\varphi, \psi \}$, the function seen as a function of a complex variable $f(z)$ satisfies 
-\[
- f(z) = O\left( |z|^{-a- \epsilon}\right), \ \textrm{ as } |z| \to 0
-\]
-and
-\[
- f(z) = O\left( |z|^{-a- \epsilon}\right), \ \textrm{ as } |z| \to \infty
-\]
+\item[\emph{1}] For $f \in \{\varphi, \psi \}$, the completion 
 \item[\emph{2}] ...
 \end{enumerate}
 then we say that $\{\varphi, \psi \}$ is in the class $\mathcal{K}$ and write $\{\varphi, \psi \} \in \mathcal{K}$.
